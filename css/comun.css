@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /*Variables de colores*/
+    --clr-main: #45880e;
+    --clr-main-light: #73ff00;
+    --clr-white: #fff7e5;
+    --clr-gray: #e2e2e2;
+    --clr-green: #316b0a;
+    --clr-red: #961818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    /* Valor por defecto */
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.texto-footer{
+    color: var(--clr-main-light);
+    font-size: .85rem;
+}
+/* login.css */
+
+/* Centrar el formulario en la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-green); /* Fondo verde */
+}
+
+.container {
+    background-color: var(--clr-white); /* Fondo claro */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h2 {
+    color: var(--clr-main);
+    margin-bottom: 1rem;
+}
+
+/* Campos de texto */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--clr-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: var(--clr-red);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Botones */
+#botones input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: var(--clr-main-light); /* Verde claro */
+    color: var(--clr-green);
+}
+
+#submit:hover {
+    background-color: var(--clr-green); /* Verde oscuro */
+    color: var(--clr-white);
+}
+
+#limpiar {
+    background-color: var(--clr-green); /* Verde oscuro */
+    color: var(--clr-white);
+}
+
+#limpiar:hover {
+    background-color: var(--clr-main-light); /* Verde claro */
+    color: var(--clr-green);
+}
