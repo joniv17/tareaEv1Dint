@@ -37,8 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
             errorPassword.textContent = "";
         }
 
-        // Evitar el envío si hay errores
-        if (!valid) e.preventDefault();
+        // Si los campos son válidos, redirigir al usuario
+        if (valid) {
+            // Prevenir el envío del formulario
+            e.preventDefault();
+
+            // Redirigir a la página main.html después de un breve retraso
+            setTimeout(() => {
+                window.location.href = "main.html"; // Redirigir a la página principal
+            }, 300); // 300ms de retraso
+        } else {
+            // Si hay errores, evitar el envío del formulario
+            e.preventDefault();
+        }
     });
 
     // Botón de limpiar datos
@@ -49,5 +60,3 @@ document.addEventListener("DOMContentLoaded", () => {
         errorPassword.textContent = "";
     });
 });
-
-
