@@ -11,17 +11,7 @@ body {
     padding: 1rem; /* Espaciado alrededor */
 }
 
-.contenedor {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 75rem; /* 1200px */
-    min-height: 90vh;
-    background-color: var(--clr-white); /* Fondo amarillo cálido */
-    border-radius: 1rem;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* Sombra suave */
-    overflow: hidden;
-}
+
 
 /* Header móvil */
 header.header-mobile {
@@ -45,17 +35,35 @@ header.header-mobile button {
     cursor: pointer;
 }
 
-/* Menú lateral */
+/* Menú lateral fijo a la derecha */
 aside {
+    position: fixed; /* Fijar el menú en la pantalla */
+    top: 0; /* Posición en la parte superior */
+    right: 0; /* Posición en la parte derecha */
     background-color: var(--clr-main);
     color: var(--clr-white);
     width: 18.75rem; /* 300px */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    z-index: 1000; /* Asegura que el menú esté por encima del contenido */
 }
 
+/* Ajuste para el contenido principal */
+.contenedor {
+    margin-right: 0; /* Elimina el margen para dejar más espacio */
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    max-width: 75%; /* Usa el 100% del ancho disponible */
+    min-height: 90vh;
+    background-color: var(--clr-white); /* Fondo amarillo cálido */
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden;
+}
 aside .logo {
     font-size: 1.5rem; /* 24px */
     cursor: pointer;
@@ -98,7 +106,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Contenido principal */
 main {
     flex-grow: 1;
     padding: 2rem;
@@ -107,6 +114,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: calc(100% - 16rem); /* Restamos el ancho del aside menos un pequeño margen (16rem en lugar de 18.75rem) */
 }
 
 main .titulo-principal {
@@ -175,6 +183,7 @@ main .titulo-principal {
 @media (max-width: 53.125rem) { /* 850px */
     aside {
         width: 15.625rem; /* 250px */
+        
     }
 
     main {
