@@ -123,7 +123,7 @@ main .titulo-principal {
 }
 
 .producto {
-    background-color: var(--clr-gray);
+    background-color: var(--clr-green); /* Fondo verde */
     padding: 1rem;
     border-radius: 0.625rem; /* 10px */
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
@@ -131,30 +131,33 @@ main .titulo-principal {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 0.5rem; /* Espaciado entre elementos */
 }
 
 .producto-imagen {
     max-width: 100%;
     border-radius: 0.625rem; /* 10px */
     margin-bottom: 1rem;
+    background-color: var(--clr-white); /* Fondo blanco detrás de la imagen */
+    padding: 0.5rem; /* Espaciado interno */
 }
 
 .producto-titulo {
-    font-size: 1.2rem; /* 19.2px */
+    font-size: 1rem; /* Ajuste del tamaño */
     font-weight: bold;
-    color: var(--clr-green);
+    color: var(--clr-white); /* Texto en blanco */
     margin-bottom: 0.5rem;
 }
 
 .producto-precio {
-    font-size: 1.1rem; /* 17.6px */
-    color: var(--clr-main);
+    font-size: 1rem; /* Ajuste del tamaño */
+    color: var(--clr-white); /* Texto en blanco */
     margin-bottom: 1rem;
 }
 
 .producto-agregar {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+    background-color: var(--clr-white); /* Botón blanco */
+    color: var(--clr-green); /* Texto verde */
     border: none;
     border-radius: 0.25rem; /* 4px */
     padding: 0.5rem 1rem;
@@ -164,7 +167,8 @@ main .titulo-principal {
 }
 
 .producto-agregar:hover {
-    background-color: var(--clr-main-light);
+    background-color: var(--clr-main-light); /* Ligero cambio en hover */
+    color: var(--clr-white); /* Texto blanco al pasar el mouse */
 }
 
 /* Responsividad */
