@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             divProducto.innerHTML = `
                 <img class="producto-imagen" src="${producto.imagen}" alt="${producto.nombre}">
                 <div class="producto-detalles">
-                    <h3 class="producto-titulo">${producto.nombre}</h3>
+                    <h3 class="producto-titulo">${producto.titulo}</h3>
                     <p class="producto-precio">$${producto.precio}</p>
                     <button class="producto-agregar" data-id="${producto.id}">Agregar</button>
                 </div>
